@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #D3D3D3;
+    color: #333;
+}
+
+header, footer {
+    background-color: white;
+    color: black;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main > section {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    flex: 0 0 300px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #0097a7;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #0077b6;
+    outline-offset: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #0077b6;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    aside {
+        flex: 1 1 100%;
+        order: -1; /* Opcional: para que el aside aparezca primero en móviles */
+    }
+}
